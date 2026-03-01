@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Preview – Choose a Template</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .intro h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .intro p {
+      color: #8b949e;
+      font-size: 1rem;
+    }
+
+    .cards {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 320px;
+      transition: border-color 0.2s, transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      border-color: #58a6ff;
+      transform: translateY(-4px);
+    }
+
+    .card-preview {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .spectral-preview { background: linear-gradient(135deg, #1c2b3a 0%, #2d4a6e 100%); }
+    .photon-preview   { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); }
+
+    .card-body {
+      padding: 1.5rem;
+      flex: 1;
+    }
+
+    .card-body h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-body p {
+      font-size: 0.88rem;
+      color: #8b949e;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 20px;
+      background: #21262d;
+      border: 1px solid #30363d;
+      color: #8b949e;
+    }
+
+    .card-footer {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid #21262d;
+      font-size: 0.85rem;
+      color: #58a6ff;
+      font-weight: 500;
+    }
+
+    .note {
+      margin-top: 3rem;
+      color: #6e7681;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    .note code {
+      background: #21262d;
+      padding: 0.1rem 0.4rem;
+      border-radius: 4px;
+      font-size: 0.78rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intro">
+    <h1>Portfolio Preview</h1>
+    <p>Choose a template to preview — both use the same <code>data.js</code>.</p>
+  </div>
+
+  <div class="cards">
+
+    <a class="card" href="templates/html5up-spectral/index.html">
+      <div class="card-preview spectral-preview">✦</div>
+      <div class="card-body">
+        <h2>Spectral</h2>
+        <p>Bold, dark hero with alternating spotlight sections for experience and a features grid for skills. Great for a dramatic first impression.</p>
+        <div class="card-tags">
+          <span class="tag">Dark theme</span>
+          <span class="tag">Spotlight layout</span>
+          <span class="tag">Scroll animations</span>
+        </div>
+      </div>
+      <div class="card-footer">Open Spectral →</div>
+    </a>
+
+    <a class="card" href="templates/html5up-photon/index.html">
+      <div class="card-preview photon-preview">◉</div>
+      <div class="card-body">
+        <h2>Photon</h2>
+        <p>Clean, minimal sections with alternating light/dark bands. Clear hierarchy across hero, skills, experience, and contact areas.</p>
+        <div class="card-tags">
+          <span class="tag">Light + dark bands</span>
+          <span class="tag">Icon grid</span>
+          <span class="tag">Card layout</span>
+        </div>
+      </div>
+      <div class="card-footer">Open Photon →</div>
+    </a>
+
+  </div>
+
+  <p class="note">
+    All content is driven by <code>data.js</code> at the project root.<br/>
+    Edit that file once to update both templates.
+  </p>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP — html5up.net | @ajlkn
+	Adapted for Raúl Fernández's portfolio.
+	Content populated via populate.js from ../../data.js
+-->
+<html lang="en">
+<head>
+  <title>Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    /* ── Project grid ── */
+    #projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5em;
+      margin-top: 2em;
+      text-align: left;
+    }
+    .project-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px;
+      padding: 1.4em;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55em;
+    }
+
+    /* project icon badge */
+    .proj-icon-wrap {
+      width: 3em;
+      height: 3em;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.3em;
+    }
+    .proj-icon-wrap .icon { font-size: 1.2em; }
+    .proj-icon-wrap.style1 { background: rgba(228, 112, 80, 0.25);  color: #e47050; }
+    .proj-icon-wrap.style2 { background: rgba(82, 197, 170, 0.25);  color: #52c5aa; }
+    .proj-icon-wrap.style3 { background: rgba(98, 148, 214, 0.25);  color: #6294d6; }
+
+    .proj-category {
+      font-size: 0.72em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.55;
+    }
+    .project-card h3 {
+      margin: 0;
+      font-size: 1em;
+      border: none;
+      padding: 0;
+    }
+    .project-card p {
+      font-size: 0.87em;
+      opacity: 0.82;
+      margin: 0;
+      flex: 1;
+      line-height: 1.6;
+    }
+    .proj-link { margin-top: 0.2em; }
+
+    /* ── Skill pills ── */
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 0.4em; }
+    .skill-pill {
+      font-size: 0.72em;
+      padding: 0.2em 0.6em;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+    .button.disabled, .button.small.disabled {
+      opacity: 0.4;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* ── Experience (icon column replaces stock photo) ── */
+    .spotlight .exp-icon-col {
+      flex: 0 0 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.03);
+      min-height: 16em;
+    }
+    .exp-icon {
+      font-size: 3.5em;
+      opacity: 0.25;
+    }
+    .exp-roles {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.8em;
+    }
+    .exp-roles li {
+      padding: 0.22em 0;
+      font-size: 0.88em;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .exp-roles li:last-child { border-bottom: none; }
+    .exp-period { opacity: 0.6; font-size: 0.88em; }
+
+    .spotlight .content h2 small {
+      display: block;
+      font-size: 0.5em;
+      font-weight: 400;
+      opacity: 0.6;
+      margin-top: 0.3em;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    /* ── Education entries ── */
+    #education-list {
+      text-align: left;
+      max-width: 460px;
+      margin: 0 auto 1.5em;
+    }
+    .edu-entry {
+      display: flex;
+      flex-direction: column;
+      padding: 0.5em 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .edu-entry:last-child { border-bottom: none; }
+    .edu-entry strong { font-size: 0.92em; }
+    .edu-entry span   { font-size: 0.83em; opacity: 0.78; }
+    .edu-entry em     { font-size: 0.76em; opacity: 0.5; font-style: normal; }
+  </style>
+</head>
+<body class="landing is-preload">
+
+<div id="page-wrapper">
+
+  <!-- ── Header ── -->
+  <header id="header" class="alt">
+    <h1><a href="index.html">Portfolio</a></h1>
+    <nav id="nav">
+      <ul>
+        <li class="special">
+          <a href="#menu" class="menuToggle"><span>Menu</span></a>
+          <div id="menu">
+            <ul>
+              <li><a href="#one"   class="scrolly">About</a></li>
+              <li><a href="#two"   class="scrolly">Projects</a></li>
+              <li><a href="#three" class="scrolly">Skills</a></li>
+              <li><a href="#four"  class="scrolly">Experience</a></li>
+              <li><a href="#cta"   class="scrolly">Education</a></li>
+              <li><a href="../../index.html">← All Templates</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── Banner / Hero ── -->
+  <section id="banner">
+    <div class="inner">
+      <h2 id="banner-name">Raúl Fernández</h2>
+      <p id="banner-subtitle">Senior Machine Learning Engineer · Data Scientist</p>
+      <ul class="actions special">
+        <li><a href="#two"  class="button primary scrolly">See Projects</a></li>
+        <li><a href="#one"  class="button scrolly">About Me</a></li>
+      </ul>
+    </div>
+    <a href="#one" class="more scrolly">Scroll Down</a>
+  </section>
+
+  <!-- ── About (#one) ── -->
+  <section id="one" class="wrapper style1 special">
+    <div class="inner">
+      <header class="major">
+        <h2>About Me</h2>
+        <p id="about-text">Loading…</p>
+      </header>
+      <ul class="icons major">
+        <li><span class="icon solid fa-robot major style1"><span class="label">LLMs</span></span></li>
+        <li><span class="icon solid fa-eye major style2"><span class="label">Vision</span></span></li>
+        <li><span class="icon solid fa-cloud major style3"><span class="label">MLOps</span></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Projects (#two) ── -->
+  <section id="two" class="wrapper style2 special">
+    <div class="inner">
+      <header class="major">
+        <h2>Projects</h2>
+        <p>Production systems built at scale — LLM agents, computer vision, and ML pipelines.</p>
+      </header>
+      <div id="projects-container"></div>
+    </div>
+  </section>
+
+  <!-- ── Skills (#three) ── -->
+  <section id="three" class="wrapper style3 special">
+    <div class="inner">
+      <header class="major">
+        <h2>Technical Skills</h2>
+        <p>Core competencies across ML engineering, computer vision, and production systems.</p>
+      </header>
+      <ul class="features" id="skills-container"></ul>
+    </div>
+  </section>
+
+  <!-- ── Experience (#four) ── -->
+  <section id="four" class="wrapper alt style2">
+    <div id="experience-container"></div>
+  </section>
+
+  <!-- ── Education / CTA ── -->
+  <section id="cta" class="wrapper style4">
+    <div class="inner">
+      <header>
+        <h2>Education</h2>
+        <div id="education-list"></div>
+      </header>
+      <ul class="actions stacked">
+        <li><a id="cta-linkedin" href="#" class="button fit primary">Connect on LinkedIn</a></li>
+        <li><a href="../../index.html" class="button fit">Compare Templates</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer id="footer">
+    <ul class="icons">
+      <li><a id="footer-linkedin" href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+      <li><a id="footer-github"   href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+      <li><a id="footer-email"    href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+    </ul>
+    <ul class="copyright">
+      <li>&copy; Raúl Fernández</li>
+      <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+  </footer>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="../../data.js"></script>
+<script src="assets/js/populate.js"></script>
+
+</body>
+</html>

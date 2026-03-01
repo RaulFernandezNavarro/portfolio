@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<!--
+	Photon by HTML5 UP — html5up.net | @ajlkn
+	Adapted for Raúl Fernández's portfolio.
+	Content populated via populate.js from ../../data.js
+-->
+<html lang="en">
+<head>
+  <title>Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    /* ── Language badges ── */
+    .lang-badge {
+      display: inline-block;
+      font-size: 0.82em;
+      padding: 0.25em 0.75em;
+      border-radius: 20px;
+      border: 1px solid rgba(0,0,0,0.15);
+      background: rgba(0,0,0,0.05);
+      margin: 0.2em 0.3em;
+    }
+    #languages-list { margin-top: 1em; }
+
+    /* ── Skills ── */
+    .skill-item { margin-bottom: 1em; }
+    .skill-item strong { display: block; margin-bottom: 0.15em; }
+    .skill-item p { font-size: 0.88em; opacity: 0.8; margin: 0; line-height: 1.6; }
+
+    /* ── Project cards ── */
+    .proj-card { margin-bottom: 1em; }
+    .proj-category {
+      font-size: 0.72em;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.55;
+      margin: 0.6em 0 0.3em;
+    }
+    .proj-card h3 { margin-bottom: 0.4em; }
+    .proj-card p  { font-size: 0.87em; line-height: 1.65; }
+
+    /* ── Skill tags ── */
+    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.35em; margin-top: 0.5em; }
+    .skill-tag {
+      font-size: 0.72em;
+      padding: 0.2em 0.6em;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+    /* light-bg sections override */
+    .main.style1 .skill-tag {
+      background: rgba(0,0,0,0.05);
+      border-color: rgba(0,0,0,0.12);
+    }
+    .main.style1 .proj-category { color: inherit; }
+
+    /* ── Experience ── */
+    .exp-roles { margin: 0.4em 0 0.6em; }
+    .exp-role {
+      display: flex;
+      flex-direction: column;
+      padding: 0.3em 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.88em;
+    }
+    .exp-role:last-child { border-bottom: none; }
+    .exp-period   { font-size: 0.85em; opacity: 0.6; }
+    .exp-location { font-size: 0.85em; opacity: 0.65; margin: 0.15em 0 0.5em; }
+    .exp-desc     { font-size: 0.87em; line-height: 1.6; margin-top: 0.4em; }
+
+    /* ── Education & Certs ── */
+    #education-list, #certs-list {
+      text-align: left;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-size: 0.78em;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.6;
+      margin: 2em 0 0.8em;
+      border-bottom: 1px solid rgba(255,255,255,0.15);
+      padding-bottom: 0.4em;
+    }
+    .edu-row, .cert-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1em;
+      padding: 0.5em 0;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-size: 0.88em;
+    }
+    .edu-row:last-child, .cert-row:last-child { border-bottom: none; }
+    .edu-left  { display: flex; flex-direction: column; gap: 0.15em; }
+    .edu-right { display: flex; flex-direction: column; align-items: flex-end; gap: 0.1em; flex-shrink: 0; }
+    .edu-period { opacity: 0.65; font-size: 0.9em; }
+    .edu-note   { opacity: 0.5; font-size: 0.82em; font-style: italic; }
+    .cert-row   { flex-direction: column; gap: 0.1em; }
+    .cert-row span { opacity: 0.6; font-size: 0.9em; }
+
+    .button.disabled {
+      opacity: 0.4;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    @media (max-width: 640px) {
+      .edu-row { flex-direction: column; }
+      .edu-right { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body class="is-preload">
+
+  <!-- ── Hero ── -->
+  <section id="header">
+    <div class="inner">
+      <span class="icon solid major fa-brain"></span>
+      <h1 id="hero-name">Hi, I'm <strong>Raúl</strong>.</h1>
+      <p id="hero-subtitle" style="font-size:1.1em; font-weight:600; margin-bottom:0.5em;"></p>
+      <p id="hero-tagline"></p>
+      <ul class="actions special">
+        <li><a href="#three" class="button scrolly">See Projects</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── About (#one) ── -->
+  <section id="one" class="main style1">
+    <div class="container">
+      <div class="row gtr-150">
+        <div class="col-6 col-12-medium">
+          <header class="major">
+            <h2>About Me</h2>
+          </header>
+          <p id="about-text">Loading…</p>
+          <div id="languages-list"></div>
+        </div>
+        <div class="col-6 col-12-medium imp-medium">
+          <span class="image fit"><img src="images/pic01.jpg" alt="" /></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Skills (#two) ── -->
+  <section id="two" class="main style2">
+    <div class="container">
+      <div class="row gtr-150">
+        <div class="col-6 col-12-medium">
+          <ul class="major-icons" id="skills-icons"></ul>
+        </div>
+        <div class="col-6 col-12-medium">
+          <header class="major">
+            <h2>Technical Skills</h2>
+          </header>
+          <div id="skills-text"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects (#three) ── -->
+  <section id="three" class="main style1 special">
+    <div class="container">
+      <header class="major">
+        <h2>Projects</h2>
+      </header>
+      <p>Production systems built at scale — LLM agents, computer vision, and ML pipelines.</p>
+      <div class="row gtr-150" id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- ── Experience (#four) ── -->
+  <section id="four" class="main style2 special">
+    <div class="container">
+      <header class="major">
+        <h2>Experience</h2>
+      </header>
+      <div class="row gtr-150" id="experience-cards"></div>
+    </div>
+  </section>
+
+  <!-- ── Education & Certifications (#five) ── -->
+  <section id="five" class="main style1 special">
+    <div class="container">
+      <header class="major">
+        <h2>Education &amp; Certifications</h2>
+      </header>
+
+      <p class="section-label">Academic Background</p>
+      <div id="education-list"></div>
+
+      <p class="section-label">Certifications</p>
+      <div id="certs-list"></div>
+
+      <ul class="actions special" style="margin-top:2.5em;">
+        <li><a id="cta-linkedin" href="#" class="button wide primary">Connect on LinkedIn</a></li>
+        <li><a href="../../index.html" class="button wide">Compare Templates</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <section id="footer">
+    <ul class="icons">
+      <li><a id="footer-linkedin" href="#" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+      <li><a id="footer-github"   href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+      <li><a id="footer-email"    href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+    </ul>
+    <ul class="copyright">
+      <li>&copy; Raúl Fernández</li>
+      <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+  </section>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="../../data.js"></script>
+<script src="assets/js/populate.js"></script>
+
+</body>
+</html>
