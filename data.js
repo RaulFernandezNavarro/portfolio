@@ -10,8 +10,8 @@ const PROFILE = {
 
   // Social / contact links — update as needed
   linkedin: "https://www.linkedin.com/in/raulfernandeznavarro",
-  github: "#",   // e.g. https://github.com/yourhandle
-  email: "#",    // e.g. mailto:you@example.com
+  github: "https://github.com/RaulFernandezNavarro",
+  email: "mailto:raulfernandeznavarro@outlook.com",
 
   about: "I'm a Senior ML Engineer based in Rotterdam, four years into building production machine learning at bol. The work ranges from LLM agents to computer vision systems. I came from a software engineering background and I like that this field makes you good at both. I finished my MSc in Data Science in 2026 and I'm available for freelance consulting.",
 
